@@ -9,3 +9,4 @@ def ordenar(ini, fim, tamanho):
 
 
 ordenar(0, 50, 10)
+ordenar(0, 500, 12)
