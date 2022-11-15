@@ -1,17 +1,11 @@
-import random
+from random import sample
 
-def ordenacao_selecao(A):
-    n = len(A)
-    for i in range(n):
-        minimo = i
-        for j in range(i + 1, n):
-            if A[minimo] > A [j]:
-                minimo = j
-        A[i], A[minimo] = A[minimo] , A[i]
+def ordenar(ini, fim, tamanho):
+    lista = sample(range(ini, fim), tamanho)
+    lista_ordenada = sorted(lista, reverse = True)
+    print ("Lista : " +  str(lista))
+    print ("Lista ordenada: " +  str(lista_ordenada))
 
-A = random.sample(range(-10, 10), 10)
-print(f'Arranjo não ordenado: {A}')
 
-ordenacao_selecao(A)
 
-print(f'Ordenado: {A}')
+ordenar(0, 50, 10)
